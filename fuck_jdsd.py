@@ -8,7 +8,7 @@ from loguru import logger
 '''
 下方填写key 需抓包  key在更换微信登录后会改变 具体有效期尚未可知
 '''
-key =  'DvuxhzvZfQC9qQnImP6aqK6GefzlfD74cT8JOpJjAFgMqT6yvw7PfgA65ZhhNo5d'
+key =  'uatxViWKRJ9uA8CFvPamKwLRQP/Y/K80ml8TSC/qV17RKzaN3tQjvX3I1PwtvFyw'
 session = requests.session()
 headers = {
   'Host': 'jdsd.gzhu.edu.cn',
@@ -215,11 +215,11 @@ if __name__ == '__main__':
         print(e)
         #bark(0,message = e)
     if string[0] =="今":
-        data = {"token": 'a835dbbf7bca47faad2499ce6d4f8441', "title": '经典诵读', "content": string}
+        data = {"token": 'd8e49eee3aa4418492e8b285d0941fba', "title": '经典诵读', "content": string}
         url = "http://www.pushplus.plus/send/"
         logger.info(requests.post(url, data=data).text)
     else:
-        data = {"token": 'a835dbbf7bca47faad2499ce6d4f8441', "title": '经典诵读匹配失败', "content": " "}
+        data = {"token": 'd8e49eee3aa4418492e8b285d0941fba', "title": '经典诵读匹配失败', "content": " "}
         url = "http://www.pushplus.plus/send/"
         logger.info(requests.post(url, data=data).text)
         
