@@ -8,7 +8,7 @@ from loguru import logger
 '''
 下方填写key 需抓包  key在更换微信登录后会改变 具体有效期尚未可知
 '''
-key =  '5NeeRvy7V5XmNVQFXB1WggKy5oxJP4Lwqup1B+eLVGOBRsOJ0wfM+Vzu7GDXfuas'
+key =  '5LueJRk0JG/rLJklGdWHSAgtPlrEc/dgDDVTCCtOqUyJtJqR6Oiuiw1qjlKS2Rxy'
 session = requests.session()
 headers = {
   'Host': 'jdsd.gzhu.edu.cn',
