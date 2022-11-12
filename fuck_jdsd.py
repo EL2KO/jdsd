@@ -89,20 +89,20 @@ def read():
         end = session.post(url, data = read_data)
 
 
-def vs():
-    '''
-    '朴实无华的匹配函数, 先变换counter找到对手, 后150秒内每隔一秒发送心跳包
-    '利用了一个bug, 在比赛结束后若继续发送心跳包, 会直接获得段位分和积分
-    '但是段位分无上限, 容易造成段位分过高
-    '这里判定了开始加分后, 会只执行五次加分操作
-    '''
-    print('即将开始匹配 需要花费一定时间 请耐心等待')
-    vs_find_data = {
-        'route':'get_counterpart',
-        'key':key,
-        'counter':0,
-        'find_type':0
-    }
+# def vs():
+#     '''
+#     '朴实无华的匹配函数, 先变换counter找到对手, 后150秒内每隔一秒发送心跳包
+#     '利用了一个bug, 在比赛结束后若继续发送心跳包, 会直接获得段位分和积分
+#     '但是段位分无上限, 容易造成段位分过高
+#     '这里判定了开始加分后, 会只执行五次加分操作
+#     '''
+#     print('即将开始匹配 需要花费一定时间 请耐心等待')
+#     vs_find_data = {
+#         'route':'get_counterpart',
+#         'key':key,
+#         'counter':0,
+#         'find_type':0
+#     }
     add = 0
     while(1):
         i = 0
@@ -203,8 +203,8 @@ if __name__ == '__main__':
         read()
         print('已完成阅读')
         #匹配一哈
-        vs()
-        print('已完成匹配')
+#         vs()
+#         print('已完成匹配')
         #返回
         flag, info = get_info()
         string = "今日获得:{} 总积分:{}".format(info['today'],info['total'])
