@@ -103,30 +103,30 @@ def read():
 #         'counter':0,
 #         'find_type':0
 #     }
-    add = 0
-    while(1):
-        i = 0
-        vs_find_data['counter'] = i
-        res = session.post(url,data = vs_find_data).json()
-        if res['status'] == 1:
-            game_key = res['question_bag']['gaming_key']
-            break
-        i += 1
-        if i > 10:
-            i = 0
-    question_num = get_question_num(res)
-    alive_data = {
-        'route':'ask_opponent_score',
-        'key':key,
-        'gaming_key':game_key
-    }
-    for i in range(150):
-        time.sleep(1)
-        alive_res = session.post(url,alive_data)
-        if alive_res.json()['status'] == 2:
-            add += 1
-        if add >= 5:
-            break
+#     add = 0
+#     while(1):
+#         i = 0
+#         vs_find_data['counter'] = i
+#         res = session.post(url,data = vs_find_data).json()
+#         if res['status'] == 1:
+#             game_key = res['question_bag']['gaming_key']
+#             break
+#         i += 1
+#         if i > 10:
+#             i = 0
+#     question_num = get_question_num(res)
+#     alive_data = {
+#         'route':'ask_opponent_score',
+#         'key':key,
+#         'gaming_key':game_key
+#     }
+#     for i in range(150):
+#         time.sleep(1)
+#         alive_res = session.post(url,alive_data)
+#         if alive_res.json()['status'] == 2:
+#             add += 1
+#         if add >= 5:
+#             break
 
 
 
